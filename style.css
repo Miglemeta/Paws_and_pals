@@ -1,0 +1,322 @@
+html,
+body {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.911);
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+main {
+  width: 1400px;
+  min-height: 1000px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* //navigation bar */
+#top-nav {
+  background-color: #cb9950;
+}
+#nav-wrapper > ul,
+#logoImg {
+  display: inline-block;
+  position: relative;
+  top: 0%;
+  left: 484px;
+}
+#logoImg {
+  margin-top: 10px;
+}
+.down-arrow {
+  color: #cb9950;
+  background-color: rgb(0, 0, 0);
+}
+#nav-wrapper {
+  background-color: black;
+  height: 100px;
+  position: relative;
+}
+#nav-wrapper > ul li,
+#nav-wrapper > ul a {
+  color: #cb9950;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.clearfix::after {
+  content: "";
+  display: inline-block;
+  height: 0;
+  visibility: hidden;
+  overflow: auto;
+}
+
+.dropdown {
+  opacity: 0;
+  position: absolute;
+  top: 47px;
+  right: 0;
+  background: rgb(237 232 231);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 500ms ease-in-out, opacity 300ms ease-in-out;
+}
+#nav-wrapper > ul > li:hover .dropdown {
+  opacity: 1;
+  transform: scaleY(100%);
+  transform-origin: top;
+  content: "";
+  transition: transform 300ms ease-in-out, opacity 500ms ease-in-out;
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: rgb(77, 72, 72);
+  display: block;
+  margin: auto;
+  padding: 12px 15px;
+  width: fit-content;
+}
+
+.dropdown a:not(:last-child) {
+  border-bottom: none;
+}
+#nav-wrapper > ul > li {
+  padding: 10px 15px;
+  list-style: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family: "Lucida Sans Unicode";
+  text-decoration: none;
+  content: "";
+  position: relative;
+  margin: 25px;
+}
+#nav-wrapper > ul > a {
+  list-style: none;
+  display: inline-block;
+  font-size: 20px;
+  font-family: "Lucida Sans Unicode";
+  text-decoration: none;
+  content: "";
+  margin: 25px;
+}
+.hover {
+  display: inline-block;
+  position: relative;
+}
+.hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #cb9950;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* //first page */
+
+.listPage article {
+  display: inline-block;
+  margin-top: 45px;
+  margin: 25px;
+  padding: 5px;
+  max-width: 400px;
+  height: 570px;
+  box-shadow: 4px 9px 13px 5px rgb(6 5 5 / 50%);
+}
+.listPage article a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Lucida Sans Unicode";
+}
+.listPage article img {
+  width: 100%;
+}
+.listPage article header {
+  font-weight: bold;
+  font-size: 18px;
+  font-family: "Lucida Sans Unicode";
+}
+/* //registration page */
+.salonData {
+  text-align: left;
+  display: inline-block;
+  width: 50%;
+}
+#salon-img {
+  display: block;
+  max-height: 150px;
+  float: right;
+}
+#salonForm {
+  padding-left: 90px;
+  padding-right: 90px;
+  display: block;
+  font-family: "Lucida Sans Unicode";
+  text-align: center;
+}
+#salonForm label {
+  display: block;
+  font-family: "Lucida Sans Unicode";
+}
+#salonForm input {
+  width: 265px;
+}
+.salonPage section {
+  display: block;
+  margin: auto;
+  width: 520px;
+  height: 700px;
+  box-shadow: 4px 9px 13px 5px rgb(6 5 5 / 50%);
+  font-size: 20px;
+  font-family: "Lucida Sans Unicode";
+  color: rgb(10, 10, 10);
+  margin-top: 10px;
+  padding: 10px;
+}
+.registration-wrap {
+  background-color: #cb9a502f;
+  background-color: ;
+  display: block;
+  margin: 50px;
+  padding: 10px;
+  position: relative;
+  width: max-content;
+}
+.registration {
+  text-align: center;
+  margin: auto;
+  font-family: "Lucida Sans Unicode";
+}
+
+.registration header,
+.registration div {
+  border: 1px solid rgb(10, 10, 10);
+  height: 30px;
+  width: 250px;
+  padding: 3px;
+}
+.registration-wrap input,
+.registration-wrap button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+.button_submit {
+  display: block;
+  margin-top: 10px;
+}
+.message {
+  position: absolute;
+  top: 150px;
+  left: 700px;
+  font-family: "Lucida Sans Unicode";
+  font-size: 15px;
+  animation: message-dissapear 3s;
+  animation-fill-mode: forwards;
+  background-color: #d4bb9531;
+  border: black solid 1px;
+  width: 180px;
+  height: fit-content;
+  text-align: center;
+}
+
+@keyframes message-dissapear {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* //login */
+#login-form {
+  max-width: 300px;
+  margin: auto;
+  font-family: "Lucida Sans Unicode";
+  font-size: 22px;
+  text-align: center;
+  color: #cb9950;
+}
+#login-form input {
+  width: 292px;
+}
+.delete-form label {
+  font-family: "Lucida Sans Unicode";
+  margin-left: 50px;
+}
+/* //page from navigation bar */
+.articlePage header {
+  font-family: "Lucida Sans Unicode";
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+.articlePage p {
+  font-family: "Lucida Sans Unicode";
+  line-height: 1.8;
+}
+
+/* //footer */
+.footer-wrapper {
+  background-color: black;
+  height: 400px;
+  position: relative;
+}
+.contact-form label,
+.contact-form input {
+  width: 200px;
+  display: inline-block;
+}
+.contact-form textarea {
+  width: 202px;
+  display: inline-block;
+}
+
+input[type="submit"],
+.updateTime,
+button[type="submit"] {
+  background: #ccc;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 90px;
+  margin: auto;
+  font-size: 15px;
+  font-family: "Lucida Sans Unicode";
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 410px;
+  color: #cb9950;
+  position: absolute;
+  top: 25px;
+  left: 700px;
+  font-family: "Lucida Sans Unicode";
+  font-size: 15px;
+}
+.contact-form header {
+  font-size: 20px;
+}
+.contact-form input[type="submit"] {
+  margin: 0;
+}
